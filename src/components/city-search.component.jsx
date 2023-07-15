@@ -39,7 +39,7 @@ export default function CitySearchComponent() {
 
   useEffect(() => {
     const handleClick = evt => {
-      if (suggestionRef?.current && !suggestionRef.current.contains(evt.target)) {
+      if (suggestionRef?.current?.classList.contains('visible') && !suggestionRef.current.contains(evt.target)) {
         setEnableSelection(false);
         if (cityContext.city)
           setQuery(`${cityContext.city.name}, ${cityContext.city.admin1}, ${cityContext.city.country_code}`);
