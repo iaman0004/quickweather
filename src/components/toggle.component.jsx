@@ -1,6 +1,6 @@
 export default function ToggleComponent({ config = [], toggleHandler }) {
   const changeActive = toggle => {
-    toggleHandler();
+    toggleHandler(toggle);
     config.forEach(t_item => {
       t_item.active = t_item._id === toggle._id ? true : false;
     })

@@ -7,7 +7,8 @@ export default function WeatherForecastComponent() {
   const [city, setCity] = useState(undefined);
   const [temperatureUnit, setTemperatureUnit] = useState('celsius');
 
-  const toggleTemperatureUnit = () => {
+  const toggleTemperatureUnit = (toggle) => {
+    if (toggle._id === temperatureUnit) return;
     setTemperatureUnit(temperatureUnit === 'celsius' ? 'fahrenheit' : 'celsius'); 
   };
 
